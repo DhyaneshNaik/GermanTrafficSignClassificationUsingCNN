@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Traffic Sign Classification App</title>
+
+{% endblock %}
+
+{% block body %}
+<form action="/predict" id="upload-file" method="POST" enctype="multipart/form-data">
+    <input id="imageUpload" name="imageUpload" type="file" class="btn" accept=".png, .jpg, .jpeg">
+
+    <div id="image-section" class="img-section">
+        <div id="image">
+        </div>
+
+        <div id="btnUp">
+            <button class="btnNew" id='btnUpload' type="submit">Predict Sign</button>
+        </div>
+
+    </div>
+</form>
+
+
+{% endblock %}
